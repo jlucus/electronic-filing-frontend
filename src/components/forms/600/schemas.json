@@ -1,0 +1,5855 @@
+[
+{
+  "$schema": "http://json-schema.org/schema#",
+  "form_type": "Ec601",
+  "type": "object",
+  "properties": {
+    "disclosure": {
+      "type": "object",
+      "properties": {
+        "@agency": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "@version": {
+          "type": "string"
+        },
+        "allow_municipal_decision_deletion": {
+          "type": "string"
+        },
+        "cover": {
+          "type": "object",
+          "properties": {
+            "calendar_year": {
+              "type": "string"
+            },
+            "filer": {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "filer_address": {
+              "type": "object",
+              "properties": {
+                "line_1": {
+                  "type": "string"
+                },
+                "line_2": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "zip": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "city",
+                "line_1",
+                "state",
+                "zip"
+              ]
+            },
+            "filer_contact_email": {
+              "type": "string"
+            },
+            "filer_phone": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "phone_number": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "phone_number"
+                  ]
+                }
+              ]
+            },
+            "signature": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "location": {
+                  "type": "string"
+                },
+                "signer_first_name": {
+                  "type": "string"
+                },
+                "signer_last_name": {
+                  "type": "string"
+                },
+                "signer_title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "date",
+                "location",
+                "signer_first_name",
+                "signer_last_name",
+                "signer_title"
+              ]
+            }
+          },
+          "required": [
+            "calendar_year",
+            "filer",
+            "filer_address",
+            "filer_phone",
+            "signature"
+          ]
+        },
+        "filing_fees": {
+          "type": "object",
+          "properties": {
+            "added_lobbyists": {
+              "type": "string"
+            },
+            "added_clients": {
+              "type": "string"
+            },
+            "filing_fee_due": {
+              "type": "string"
+            },
+            "fee_per_client": {
+              "type": "string"
+            },
+            "fee_per_lobbyist": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "added_clients",
+            "added_lobbyists",
+            "filing_fee_due"
+          ]
+        },
+        "schedule_a": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "entity": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_b": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "lobbying_client": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "client": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "client_address": {
+                        "type": "object",
+                        "properties": {
+                          "line_1": {
+                            "type": "string"
+                          },
+                          "line_2": {
+                            "type": "string"
+                          },
+                          "city": {
+                            "type": "string"
+                          },
+                          "state": {
+                            "type": "string"
+                          },
+                          "zip": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "city",
+                          "line_1",
+                          "state",
+                          "zip"
+                        ]
+                      },
+                      "client_phone": {
+                        "type": "object",
+                        "properties": {
+                          "phone_number": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "phone_number"
+                        ]
+                      },
+                      "client_business_description": {
+                        "type": "string"
+                      },
+                      "municipal_decisions": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "municipal_decision": {
+                            "anyOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "@id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "@id"
+                                ]
+                              },
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "@id": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "@id"
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count"
+                        ]
+                      },
+                      "coalition_members": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "coalition_member": {
+                            "anyOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "address": {
+                                      "type": "object",
+                                      "properties": {
+                                        "line_1": {
+                                          "type": "string"
+                                        },
+                                        "city": {
+                                          "type": "string"
+                                        },
+                                        "state": {
+                                          "type": "string"
+                                        },
+                                        "zip": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "line_1",
+                                        "zip"
+                                      ]
+                                    },
+                                    "member": {
+                                      "type": "object",
+                                      "properties": {
+                                        "@id": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "@id"
+                                      ]
+                                    },
+                                    "phone": {
+                                      "type": "object",
+                                      "properties": {
+                                        "phone_number": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "phone_number"
+                                      ]
+                                    },
+                                    "id": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "address",
+                                    "id",
+                                    "member",
+                                    "phone"
+                                  ]
+                                }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "address": {
+                                    "type": "object",
+                                    "properties": {
+                                      "line_1": {
+                                        "type": "string"
+                                      },
+                                      "city": {
+                                        "type": "string"
+                                      },
+                                      "state": {
+                                        "type": "string"
+                                      },
+                                      "zip": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "line_1",
+                                      "zip"
+                                    ]
+                                  },
+                                  "member": {
+                                    "type": "object",
+                                    "properties": {
+                                      "@id": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "@id"
+                                    ]
+                                  },
+                                  "phone": {
+                                    "type": "object",
+                                    "properties": {
+                                      "phone_number": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "phone_number"
+                                    ]
+                                  },
+                                  "id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "address",
+                                  "id",
+                                  "member",
+                                  "phone"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count"
+                        ]
+                      },
+                      "effective_date": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "deletion_date": {
+                        "type": "null"
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "remove_delete": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "client",
+                      "client_address",
+                      "client_business_description",
+                      "client_phone",
+                      "coalition_members",
+                      "id",
+                      "municipal_decisions"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "client": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "client_address": {
+                      "type": "object",
+                      "properties": {
+                        "line_1": {
+                          "type": "string"
+                        },
+                        "city": {
+                          "type": "string"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "zip": {
+                          "type": "string"
+                        },
+                        "line_2": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "city",
+                        "line_1",
+                        "state",
+                        "zip"
+                      ]
+                    },
+                    "client_phone": {
+                      "type": "object",
+                      "properties": {
+                        "phone_number": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "phone_number"
+                      ]
+                    },
+                    "client_business_description": {
+                      "type": "string"
+                    },
+                    "municipal_decisions": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "municipal_decision": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "@id": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "@id"
+                              ]
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "@id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "@id"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count"
+                      ]
+                    },
+                    "coalition_members": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "coalition_member": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "address": {
+                                  "type": "object",
+                                  "properties": {
+                                    "line_1": {
+                                      "type": "string"
+                                    },
+                                    "state": {
+                                      "type": "string"
+                                    },
+                                    "zip": {
+                                      "type": "string"
+                                    },
+                                    "city": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "line_1",
+                                    "state",
+                                    "zip"
+                                  ]
+                                },
+                                "member": {
+                                  "type": "object",
+                                  "properties": {
+                                    "@id": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "@id"
+                                  ]
+                                },
+                                "phone": {
+                                  "type": "object",
+                                  "properties": {
+                                    "phone_number": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "phone_number"
+                                  ]
+                                },
+                                "id": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "address",
+                                "id",
+                                "member",
+                                "phone"
+                              ]
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "address": {
+                                    "type": "object",
+                                    "properties": {
+                                      "line_1": {
+                                        "type": "string"
+                                      },
+                                      "city": {
+                                        "type": "string"
+                                      },
+                                      "state": {
+                                        "type": "string"
+                                      },
+                                      "zip": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "city",
+                                      "line_1",
+                                      "state",
+                                      "zip"
+                                    ]
+                                  },
+                                  "member": {
+                                    "type": "object",
+                                    "properties": {
+                                      "@id": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "@id"
+                                    ]
+                                  },
+                                  "phone": {
+                                    "type": "object",
+                                    "properties": {
+                                      "phone_number": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "phone_number"
+                                    ]
+                                  },
+                                  "id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "address",
+                                  "id",
+                                  "member",
+                                  "phone"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "effective_date": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "deletion_date": {
+                      "type": "null"
+                    },
+                    "remove_delete": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "client",
+                    "client_address",
+                    "client_business_description",
+                    "client_phone",
+                    "coalition_members",
+                    "id",
+                    "municipal_decisions"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_c_1": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "fundraising_activity": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "city_official": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "city_official",
+                    "id",
+                    "lobbyist"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "city_official": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "city_official",
+                      "id",
+                      "lobbyist"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_c_2": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "campaign_service": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "city_official": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "city_official",
+                      "id",
+                      "lobbyist"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "city_official": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "city_official",
+                    "id",
+                    "lobbyist"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_c_3": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "contract_service": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "department_agency_or_board": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "department_agency_or_board",
+                    "id",
+                    "lobbyist"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "department_agency_or_board": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "department_agency_or_board",
+                      "id",
+                      "lobbyist"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_d_1": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "entity": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_d_2": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "entity": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "filing_information": {
+          "type": "object",
+          "properties": {
+            "amendment_sequence_number": {
+              "type": "string"
+            },
+            "amendment_superceded_filing_id": {
+              "type": "string"
+            },
+            "amendment_description": {
+              "type": "string"
+            },
+            "filer_id": {
+              "type": "string"
+            },
+            "filing_date": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "amendment_sequence_number",
+            "filer_id",
+            "filing_date"
+          ]
+        },
+        "directory": {
+          "type": "object",
+          "properties": {
+            "entity": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@is_individual": {
+                        "type": "string"
+                      },
+                      "@id": {
+                        "type": "string"
+                      },
+                      "name_last_or_org": {
+                        "type": "string"
+                      },
+                      "effective_date": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "deletion_date": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "name_first": {
+                        "type": "string"
+                      },
+                      "name_middle": {
+                        "type": "string"
+                      },
+                      "name_prefix": {
+                        "type": "string"
+                      },
+                      "name_suffix": {
+                        "type": "string"
+                      },
+                      "remove_delete": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id",
+                      "@is_individual",
+                      "name_last_or_org"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@is_individual": {
+                      "type": "string"
+                    },
+                    "@id": {
+                      "type": "string"
+                    },
+                    "name_last_or_org": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id",
+                    "@is_individual",
+                    "name_last_or_org"
+                  ]
+                }
+              ]
+            },
+            "municipal_decision": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@id": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "outcome_sought": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id",
+                      "description"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "outcome_sought": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id",
+                    "description",
+                    "outcome_sought"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "entity"
+          ]
+        },
+        "comment_schedule_c": {
+          "type": "string"
+        },
+        "comment_schedule_b": {
+          "type": "string"
+        },
+        "comment_schedule_a": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@agency",
+        "@type",
+        "@version",
+        "cover",
+        "directory",
+        "filing_information",
+        "schedule_a",
+        "schedule_b",
+        "schedule_c_1",
+        "schedule_c_2",
+        "schedule_c_3",
+        "schedule_d_1",
+        "schedule_d_2"
+      ]
+    }
+  },
+  "required": [
+    "disclosure"
+  ]
+},
+{
+  "$schema": "http://json-schema.org/schema#",
+  "form_type": "Ec602",
+  "type": "object",
+  "properties": {
+    "disclosure": {
+      "type": "object",
+      "properties": {
+        "@agency": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "@version": {
+          "type": "string"
+        },
+        "allow_municipal_decision_deletion": {
+          "type": "string"
+        },
+        "cover": {
+          "type": "object",
+          "properties": {
+            "nature_and_purpose_of_organization": {
+              "type": "string"
+            },
+            "calendar_year": {
+              "type": "string"
+            },
+            "filer": {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "filer_address": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "line_1": {
+                      "type": "string"
+                    },
+                    "line_2": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "zip": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "city",
+                    "line_1",
+                    "state",
+                    "zip"
+                  ]
+                }
+              ]
+            },
+            "filer_contact_email": {
+              "type": "string"
+            },
+            "filer_phone": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "phone_number": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "phone_number"
+                  ]
+                }
+              ]
+            },
+            "signature": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "location": {
+                  "type": "string"
+                },
+                "signer_first_name": {
+                  "type": "string"
+                },
+                "signer_last_name": {
+                  "type": "string"
+                },
+                "signer_title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "date",
+                "location",
+                "signer_first_name",
+                "signer_last_name",
+                "signer_title"
+              ]
+            }
+          },
+          "required": [
+            "calendar_year",
+            "filer",
+            "filer_address",
+            "filer_phone",
+            "signature"
+          ]
+        },
+        "filing_fees": {
+          "type": "object",
+          "properties": {
+            "filing_fee_due": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "filing_fee_due"
+          ]
+        },
+        "schedule_a_2": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "entity": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_b_1": {
+          "type": "string"
+        },
+        "schedule_b_2": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "municipal_decision": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_c_1": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "fundraising_activity": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "city_official": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "city_official",
+                    "id",
+                    "lobbyist"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "city_official": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "city_official",
+                      "id",
+                      "lobbyist"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_c_2": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "campaign_service": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "city_official": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "city_official",
+                    "id",
+                    "lobbyist"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "city_official": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "city_official",
+                      "id",
+                      "lobbyist"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_c_3": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "contract_service": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "department_agency_or_board": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "department_agency_or_board",
+                      "id",
+                      "lobbyist"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "department_agency_or_board": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "department_agency_or_board",
+                    "id",
+                    "lobbyist"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_d": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "entity": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "filing_information": {
+          "type": "object",
+          "properties": {
+            "amendment_sequence_number": {
+              "type": "string"
+            },
+            "filer_id": {
+              "type": "string"
+            },
+            "filing_date": {
+              "type": "string"
+            },
+            "amendment_superceded_filing_id": {
+              "type": "string"
+            },
+            "amendment_description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "amendment_sequence_number",
+            "filer_id",
+            "filing_date"
+          ]
+        },
+        "directory": {
+          "type": "object",
+          "properties": {
+            "entity": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@is_individual": {
+                        "type": "string"
+                      },
+                      "@id": {
+                        "type": "string"
+                      },
+                      "name_first": {
+                        "type": "string"
+                      },
+                      "name_last_or_org": {
+                        "type": "string"
+                      },
+                      "name_prefix": {
+                        "type": "string"
+                      },
+                      "effective_date": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "deletion_date": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "name_middle": {
+                        "type": "string"
+                      },
+                      "name_suffix": {
+                        "type": "string"
+                      },
+                      "remove_delete": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id",
+                      "@is_individual",
+                      "name_last_or_org"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@is_individual": {
+                      "type": "string"
+                    },
+                    "@id": {
+                      "type": "string"
+                    },
+                    "name_last_or_org": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id",
+                    "@is_individual",
+                    "name_last_or_org"
+                  ]
+                }
+              ]
+            },
+            "municipal_decision": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "outcome_sought": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id",
+                    "description",
+                    "outcome_sought"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@id": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "outcome_sought": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id",
+                      "description",
+                      "outcome_sought"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "entity"
+          ]
+        },
+        "comment_schedule_b": {
+          "type": "string"
+        },
+        "comment_schedule_d": {
+          "type": "string"
+        },
+        "comment_schedule_c": {
+          "type": "string"
+        },
+        "comment_schedule_a": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@agency",
+        "@type",
+        "@version",
+        "cover",
+        "directory",
+        "filing_information",
+        "schedule_a_2",
+        "schedule_b_1",
+        "schedule_b_2",
+        "schedule_c_1",
+        "schedule_c_2",
+        "schedule_c_3",
+        "schedule_d"
+      ]
+    }
+  },
+  "required": [
+    "disclosure"
+  ]
+},
+{
+  "$schema": "http://json-schema.org/schema#",
+  "form_type": "Ec603",
+  "type": "object",
+  "properties": {
+    "disclosure": {
+      "type": "object",
+      "properties": {
+        "@agency": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "@version": {
+          "type": "string"
+        },
+        "cover": {
+          "type": "object",
+          "properties": {
+            "start_date": {
+              "type": "string"
+            },
+            "end_date": {
+              "type": "string"
+            },
+            "is_termination": {
+              "type": "string"
+            },
+            "lobbying_firm": {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "calendar_year": {
+              "type": "string"
+            },
+            "filer": {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "filer_address": {
+              "type": "object",
+              "properties": {
+                "line_1": {
+                  "type": "string"
+                },
+                "line_2": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "zip": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "city",
+                "line_1",
+                "state",
+                "zip"
+              ]
+            },
+            "filer_contact_email": {
+              "type": "string"
+            },
+            "filer_phone": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "phone_number": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "phone_number"
+                  ]
+                }
+              ]
+            },
+            "signature": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "location": {
+                  "type": "string"
+                },
+                "signer_first_name": {
+                  "type": "string"
+                },
+                "signer_last_name": {
+                  "type": "string"
+                },
+                "signer_title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "date",
+                "location",
+                "signer_first_name",
+                "signer_last_name",
+                "signer_title"
+              ]
+            }
+          },
+          "required": [
+            "calendar_year",
+            "end_date",
+            "filer",
+            "filer_address",
+            "filer_phone",
+            "is_termination",
+            "lobbying_firm",
+            "signature",
+            "start_date"
+          ]
+        },
+        "schedule_a_1": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "client_disclosure_with_contacts": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "is_contingency": {
+                        "type": "string"
+                      },
+                      "municipal_decision": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "lobbyists": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "entity": {
+                            "anyOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "@id": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "@id"
+                                  ]
+                                }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "@id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "@id"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count",
+                          "entity"
+                        ]
+                      },
+                      "officials": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "city_official": {
+                            "anyOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "department_name": {
+                                      "type": "string"
+                                    },
+                                    "entity": {
+                                      "type": "object",
+                                      "properties": {
+                                        "@id": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "@id"
+                                      ]
+                                    },
+                                    "job_title": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "department_name",
+                                    "entity",
+                                    "id"
+                                  ]
+                                }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "department_name": {
+                                    "type": "string"
+                                  },
+                                  "entity": {
+                                    "type": "object",
+                                    "properties": {
+                                      "@id": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "@id"
+                                    ]
+                                  },
+                                  "job_title": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "department_name",
+                                  "entity",
+                                  "id"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count",
+                          "city_official"
+                        ]
+                      },
+                      "client": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "client_address": {
+                        "type": "object",
+                        "properties": {
+                          "line_1": {
+                            "type": "string"
+                          },
+                          "line_2": {
+                            "type": "string"
+                          },
+                          "city": {
+                            "type": "string"
+                          },
+                          "state": {
+                            "type": "string"
+                          },
+                          "zip": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "city",
+                          "line_1",
+                          "state",
+                          "zip"
+                        ]
+                      },
+                      "client_phone": {
+                        "type": "object",
+                        "properties": {
+                          "phone_number": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "phone_number"
+                        ]
+                      },
+                      "total_compensation_this_period": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "specific_details_for_decision": {
+                        "type": "string"
+                      },
+                      "specific_details_for_outcome_sought": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "client",
+                      "client_address",
+                      "client_phone",
+                      "id",
+                      "is_contingency",
+                      "lobbyists",
+                      "municipal_decision",
+                      "officials",
+                      "total_compensation_this_period"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "is_contingency": {
+                      "type": "string"
+                    },
+                    "municipal_decision": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "specific_details_for_decision": {
+                      "type": "string"
+                    },
+                    "specific_details_for_outcome_sought": {
+                      "type": "string"
+                    },
+                    "lobbyists": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "entity": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "@id": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "@id"
+                              ]
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "@id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "@id"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count",
+                        "entity"
+                      ]
+                    },
+                    "officials": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "city_official": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "department_name": {
+                                    "type": "string"
+                                  },
+                                  "entity": {
+                                    "type": "object",
+                                    "properties": {
+                                      "@id": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "@id"
+                                    ]
+                                  },
+                                  "job_title": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "department_name",
+                                  "entity",
+                                  "id"
+                                ]
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "department_name": {
+                                  "type": "string"
+                                },
+                                "entity": {
+                                  "type": "object",
+                                  "properties": {
+                                    "@id": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "@id"
+                                  ]
+                                },
+                                "job_title": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "department_name",
+                                "entity",
+                                "id"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count",
+                        "city_official"
+                      ]
+                    },
+                    "client": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "client_address": {
+                      "type": "object",
+                      "properties": {
+                        "line_1": {
+                          "type": "string"
+                        },
+                        "line_2": {
+                          "type": "string"
+                        },
+                        "city": {
+                          "type": "string"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "zip": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "city",
+                        "line_1",
+                        "state",
+                        "zip"
+                      ]
+                    },
+                    "client_phone": {
+                      "type": "object",
+                      "properties": {
+                        "phone_number": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "phone_number"
+                      ]
+                    },
+                    "total_compensation_this_period": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "client",
+                    "client_address",
+                    "client_phone",
+                    "id",
+                    "is_contingency",
+                    "lobbyists",
+                    "municipal_decision",
+                    "officials",
+                    "total_compensation_this_period"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_a_2": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "client_disclosure_no_contacts": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "client": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "client_address": {
+                        "type": "object",
+                        "properties": {
+                          "line_1": {
+                            "type": "string"
+                          },
+                          "line_2": {
+                            "type": "string"
+                          },
+                          "city": {
+                            "type": "string"
+                          },
+                          "state": {
+                            "type": "string"
+                          },
+                          "zip": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "city",
+                          "line_1",
+                          "state",
+                          "zip"
+                        ]
+                      },
+                      "client_phone": {
+                        "type": "object",
+                        "properties": {
+                          "phone_number": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "phone_number"
+                        ]
+                      },
+                      "total_compensation_this_period": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "client",
+                      "client_address",
+                      "client_phone",
+                      "id",
+                      "total_compensation_this_period"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "client": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "client_address": {
+                      "type": "object",
+                      "properties": {
+                        "line_1": {
+                          "type": "string"
+                        },
+                        "city": {
+                          "type": "string"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "zip": {
+                          "type": "string"
+                        },
+                        "line_2": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "city",
+                        "line_1",
+                        "state",
+                        "zip"
+                      ]
+                    },
+                    "client_phone": {
+                      "type": "object",
+                      "properties": {
+                        "phone_number": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "phone_number"
+                      ]
+                    },
+                    "total_compensation_this_period": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "client",
+                    "client_address",
+                    "client_phone",
+                    "id",
+                    "total_compensation_this_period"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_b": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "activity_expense": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "date": {
+                        "type": "string"
+                      },
+                      "amount": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "beneficiary_name": {
+                        "type": "string"
+                      },
+                      "beneficiaries": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "city_official": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "department_name": {
+                                "type": "string"
+                              },
+                              "entity": {
+                                "type": "object",
+                                "properties": {
+                                  "@id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "@id"
+                                ]
+                              },
+                              "job_title": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "department_name",
+                              "entity",
+                              "id",
+                              "job_title"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count",
+                          "city_official"
+                        ]
+                      },
+                      "lobbyists": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "entity": {
+                            "anyOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "@id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "@id"
+                                ]
+                              },
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "@id": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "@id"
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count",
+                          "entity"
+                        ]
+                      },
+                      "payee": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "payee_address": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "line_1": {
+                                "type": "string"
+                              },
+                              "city": {
+                                "type": "string"
+                              },
+                              "state": {
+                                "type": "string"
+                              },
+                              "zip": {
+                                "type": "string"
+                              },
+                              "line_2": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "city",
+                              "line_1",
+                              "state",
+                              "zip"
+                            ]
+                          }
+                        ]
+                      },
+                      "client": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "amount_range": {
+                        "type": "string"
+                      },
+                      "amount_range_as_string": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "amount",
+                      "beneficiaries",
+                      "beneficiary_name",
+                      "client",
+                      "date",
+                      "description",
+                      "id",
+                      "lobbyists",
+                      "payee",
+                      "payee_address"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "amount": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "beneficiary_name": {
+                      "type": "string"
+                    },
+                    "beneficiaries": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "city_official": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "department_name": {
+                              "type": "string"
+                            },
+                            "entity": {
+                              "type": "object",
+                              "properties": {
+                                "@id": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "@id"
+                              ]
+                            },
+                            "job_title": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "department_name",
+                            "entity",
+                            "id",
+                            "job_title"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count",
+                        "city_official"
+                      ]
+                    },
+                    "lobbyists": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "entity": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "@id": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "@id"
+                              ]
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "@id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "@id"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count",
+                        "entity"
+                      ]
+                    },
+                    "payee": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "payee_address": {
+                      "anyOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "line_1": {
+                              "type": "string"
+                            },
+                            "line_2": {
+                              "type": "string"
+                            },
+                            "city": {
+                              "type": "string"
+                            },
+                            "state": {
+                              "type": "string"
+                            },
+                            "zip": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "city",
+                            "line_1",
+                            "line_2",
+                            "state",
+                            "zip"
+                          ]
+                        }
+                      ]
+                    },
+                    "client": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "beneficiaries",
+                    "beneficiary_name",
+                    "client",
+                    "date",
+                    "description",
+                    "id",
+                    "lobbyists",
+                    "payee",
+                    "payee_address"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_c": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "campaign_contribution": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "date": {
+                        "type": "string"
+                      },
+                      "amount": {
+                        "type": "string"
+                      },
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "candidate": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "committee": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "amount",
+                      "candidate",
+                      "date",
+                      "id",
+                      "lobbyist"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "amount": {
+                      "type": "string"
+                    },
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "candidate": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "committee": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "candidate",
+                    "date",
+                    "id",
+                    "lobbyist"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_d": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "campaign_contribution_measure": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "string"
+                },
+                "lobbyist": {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                "candidate": {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                "committee": {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                "id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "amount",
+                "candidate",
+                "committee",
+                "date",
+                "id",
+                "lobbyist"
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_e": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "fundraising_activity_extended": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "description": {
+                        "type": "string"
+                      },
+                      "total_amount_raised": {
+                        "type": "string"
+                      },
+                      "dates_of_activity": {
+                        "type": "string"
+                      },
+                      "with_other_persons": {
+                        "type": "string"
+                      },
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "city_official": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "ballot_measure": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "city_official",
+                      "dates_of_activity",
+                      "description",
+                      "id",
+                      "lobbyist",
+                      "total_amount_raised"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    },
+                    "total_amount_raised": {
+                      "type": "string"
+                    },
+                    "dates_of_activity": {
+                      "type": "string"
+                    },
+                    "with_other_persons": {
+                      "type": "string"
+                    },
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "city_official": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "ballot_measure": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "city_official",
+                    "dates_of_activity",
+                    "description",
+                    "id",
+                    "lobbyist",
+                    "total_amount_raised"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_f": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "campaign_service_extended": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "committee": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "ballot_measure_description": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "total_compensation": {
+                      "type": "string"
+                    },
+                    "is_contingency": {
+                      "type": "string"
+                    },
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "city_official": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "candidate_office_sought": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "city_official",
+                    "committee",
+                    "description",
+                    "id",
+                    "is_contingency",
+                    "lobbyist",
+                    "total_compensation"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "candidate_office_sought": {
+                        "type": "string"
+                      },
+                      "committee": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "total_compensation": {
+                        "type": "string"
+                      },
+                      "is_contingency": {
+                        "type": "string"
+                      },
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "city_official": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "candidate_office_sought",
+                      "city_official",
+                      "committee",
+                      "description",
+                      "id",
+                      "is_contingency",
+                      "lobbyist",
+                      "total_compensation"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_g": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "contract_service_extended": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "amount": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "department_agency_or_board": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "amount",
+                      "department_agency_or_board",
+                      "description",
+                      "id",
+                      "lobbyist"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "department_agency_or_board": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "department_agency_or_board",
+                    "description",
+                    "id",
+                    "lobbyist"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "filing_information": {
+          "type": "object",
+          "properties": {
+            "amendment_sequence_number": {
+              "type": "string"
+            },
+            "filer_id": {
+              "type": "string"
+            },
+            "filing_date": {
+              "type": "string"
+            },
+            "amendment_superceded_filing_id": {
+              "type": "string"
+            },
+            "amendment_description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "amendment_sequence_number",
+            "filer_id",
+            "filing_date"
+          ]
+        },
+        "directory": {
+          "type": "object",
+          "properties": {
+            "entity": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@is_individual": {
+                        "type": "string"
+                      },
+                      "@id": {
+                        "type": "string"
+                      },
+                      "name_last_or_org": {
+                        "type": "string"
+                      },
+                      "name_first": {
+                        "type": "string"
+                      },
+                      "effective_date": {
+                        "type": "null"
+                      },
+                      "deletion_date": {
+                        "type": "null"
+                      },
+                      "name_middle": {
+                        "type": "string"
+                      },
+                      "name_prefix": {
+                        "type": "string"
+                      },
+                      "name_suffix": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id",
+                      "@is_individual"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@is_individual": {
+                      "type": "string"
+                    },
+                    "@id": {
+                      "type": "string"
+                    },
+                    "name_last_or_org": {
+                      "type": "string"
+                    },
+                    "effective_date": {
+                      "type": "null"
+                    },
+                    "deletion_date": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "@id",
+                    "@is_individual",
+                    "name_last_or_org"
+                  ]
+                }
+              ]
+            },
+            "municipal_decision": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@id": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "outcome_sought": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "outcome_sought": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "entity"
+          ]
+        },
+        "comment_schedule_a_1": {
+          "type": "string"
+        },
+        "comment_schedule_a_2": {
+          "type": "string"
+        },
+        "comment_schedule_c": {
+          "type": "string"
+        },
+        "comment_schedule_g": {
+          "type": "string"
+        },
+        "comment_schedule_b": {
+          "type": "string"
+        },
+        "comment_schedule_d": {
+          "type": "string"
+        },
+        "comment_schedule_e": {
+          "type": "string"
+        },
+        "comment_schedule_f": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@agency",
+        "@type",
+        "@version",
+        "cover",
+        "directory",
+        "filing_information",
+        "schedule_a_1",
+        "schedule_a_2",
+        "schedule_b",
+        "schedule_c",
+        "schedule_d",
+        "schedule_e",
+        "schedule_f",
+        "schedule_g"
+      ]
+    }
+  },
+  "required": [
+    "disclosure"
+  ]
+},
+{
+  "$schema": "http://json-schema.org/schema#",
+  "form_type": "Ec604",
+  "type": "object",
+  "properties": {
+    "disclosure": {
+      "type": "object",
+      "properties": {
+        "@agency": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "@version": {
+          "type": "string"
+        },
+        "cover": {
+          "type": "object",
+          "properties": {
+            "start_date": {
+              "type": "string"
+            },
+            "end_date": {
+              "type": "string"
+            },
+            "is_termination": {
+              "type": "string"
+            },
+            "calendar_year": {
+              "type": "string"
+            },
+            "filer": {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "filer_address": {
+              "type": "object",
+              "properties": {
+                "line_1": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "zip": {
+                  "type": "string"
+                },
+                "line_2": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "city",
+                "line_1",
+                "state",
+                "zip"
+              ]
+            },
+            "filer_contact_email": {
+              "type": "string"
+            },
+            "filer_phone": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "phone_number": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "phone_number"
+                  ]
+                }
+              ]
+            },
+            "signature": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "location": {
+                  "type": "string"
+                },
+                "signer_first_name": {
+                  "type": "string"
+                },
+                "signer_last_name": {
+                  "type": "string"
+                },
+                "signer_title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "date",
+                "location",
+                "signer_first_name",
+                "signer_last_name",
+                "signer_title"
+              ]
+            }
+          },
+          "required": [
+            "calendar_year",
+            "end_date",
+            "filer",
+            "filer_address",
+            "filer_phone",
+            "is_termination",
+            "signature",
+            "start_date"
+          ]
+        },
+        "schedule_a": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "city_decision": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "municipal_decision": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "lobbyists": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "entity": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "@id": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "@id"
+                              ]
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "@id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "@id"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count",
+                        "entity"
+                      ]
+                    },
+                    "officials": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "city_official": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "department_name": {
+                                  "type": "string"
+                                },
+                                "entity": {
+                                  "type": "object",
+                                  "properties": {
+                                    "@id": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "@id"
+                                  ]
+                                },
+                                "job_title": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "department_name",
+                                "entity",
+                                "id"
+                              ]
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "department_name": {
+                                    "type": "string"
+                                  },
+                                  "entity": {
+                                    "type": "object",
+                                    "properties": {
+                                      "@id": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "@id"
+                                    ]
+                                  },
+                                  "job_title": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "entity",
+                                  "id"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count",
+                        "city_official"
+                      ]
+                    },
+                    "total_number_of_contacts": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "specific_details_for_outcome_sought": {
+                      "type": "string"
+                    },
+                    "specific_details_for_decision": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "lobbyists",
+                    "municipal_decision",
+                    "officials",
+                    "total_number_of_contacts"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "municipal_decision": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "lobbyists": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "entity": {
+                            "anyOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "@id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "@id"
+                                ]
+                              },
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "@id": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "@id"
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count",
+                          "entity"
+                        ]
+                      },
+                      "officials": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "city_official": {
+                            "anyOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "department_name": {
+                                      "type": "string"
+                                    },
+                                    "entity": {
+                                      "type": "object",
+                                      "properties": {
+                                        "@id": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "@id"
+                                      ]
+                                    },
+                                    "job_title": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "department_name",
+                                    "entity",
+                                    "id"
+                                  ]
+                                }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "department_name": {
+                                    "type": "string"
+                                  },
+                                  "entity": {
+                                    "type": "object",
+                                    "properties": {
+                                      "@id": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "@id"
+                                    ]
+                                  },
+                                  "job_title": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "department_name",
+                                  "entity",
+                                  "id"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count",
+                          "city_official"
+                        ]
+                      },
+                      "total_number_of_contacts": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "specific_details_for_decision": {
+                        "type": "string"
+                      },
+                      "specific_details_for_outcome_sought": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "lobbyists",
+                      "municipal_decision",
+                      "officials",
+                      "total_number_of_contacts"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_b": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "activity_expense": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "amount": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "beneficiary_name": {
+                      "type": "string"
+                    },
+                    "beneficiaries": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "city_official": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "department_name": {
+                              "type": "string"
+                            },
+                            "entity": {
+                              "type": "object",
+                              "properties": {
+                                "@id": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "@id"
+                              ]
+                            },
+                            "job_title": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "department_name",
+                            "entity",
+                            "id",
+                            "job_title"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count",
+                        "city_official"
+                      ]
+                    },
+                    "lobbyists": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "entity": {
+                          "type": "object",
+                          "properties": {
+                            "@id": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "@id"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count",
+                        "entity"
+                      ]
+                    },
+                    "payee": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "payee_address": {
+                      "anyOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "line_1": {
+                              "type": "string"
+                            },
+                            "line_2": {
+                              "type": "string"
+                            },
+                            "city": {
+                              "type": "string"
+                            },
+                            "state": {
+                              "type": "string"
+                            },
+                            "zip": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "city",
+                            "line_1",
+                            "state",
+                            "zip"
+                          ]
+                        }
+                      ]
+                    },
+                    "client": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "beneficiaries",
+                    "beneficiary_name",
+                    "client",
+                    "date",
+                    "description",
+                    "id",
+                    "lobbyists",
+                    "payee",
+                    "payee_address"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "date": {
+                        "type": "string"
+                      },
+                      "amount": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "beneficiary_name": {
+                        "type": "string"
+                      },
+                      "beneficiaries": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "city_official": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "department_name": {
+                                "type": "string"
+                              },
+                              "entity": {
+                                "type": "object",
+                                "properties": {
+                                  "@id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "@id"
+                                ]
+                              },
+                              "job_title": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "department_name",
+                              "entity",
+                              "id",
+                              "job_title"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count",
+                          "city_official"
+                        ]
+                      },
+                      "lobbyists": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "entity": {
+                            "type": "object",
+                            "properties": {
+                              "@id": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "@id"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count",
+                          "entity"
+                        ]
+                      },
+                      "payee": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "payee_address": {
+                        "anyOf": [
+                          {
+                            "type": "null"
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "line_1": {
+                                "type": "string"
+                              },
+                              "line_2": {
+                                "type": "string"
+                              },
+                              "city": {
+                                "type": "string"
+                              },
+                              "state": {
+                                "type": "string"
+                              },
+                              "zip": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "city",
+                              "line_1",
+                              "line_2",
+                              "state",
+                              "zip"
+                            ]
+                          }
+                        ]
+                      },
+                      "client": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "amount_range": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "amount",
+                      "beneficiaries",
+                      "beneficiary_name",
+                      "client",
+                      "date",
+                      "description",
+                      "id",
+                      "lobbyists",
+                      "payee",
+                      "payee_address"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_c": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "campaign_contribution": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "type": "string"
+                    },
+                    "amount": {
+                      "type": "string"
+                    },
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "candidate": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "committee": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "candidate",
+                    "date",
+                    "id",
+                    "lobbyist"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "date": {
+                        "type": "string"
+                      },
+                      "amount": {
+                        "type": "string"
+                      },
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "candidate": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "committee": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "amount",
+                      "candidate",
+                      "date",
+                      "id",
+                      "lobbyist"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_d": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "campaign_contribution_measure": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "string"
+                },
+                "lobbyist": {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                "candidate": {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                "committee": {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                "id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "amount",
+                "candidate",
+                "committee",
+                "date",
+                "id",
+                "lobbyist"
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_e": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "fundraising_activity_extended": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "description": {
+                        "type": "string"
+                      },
+                      "total_amount_raised": {
+                        "type": "string"
+                      },
+                      "dates_of_activity": {
+                        "type": "string"
+                      },
+                      "with_other_persons": {
+                        "type": "string"
+                      },
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "city_official": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "city_official",
+                      "dates_of_activity",
+                      "description",
+                      "id",
+                      "lobbyist",
+                      "total_amount_raised"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    },
+                    "total_amount_raised": {
+                      "type": "string"
+                    },
+                    "dates_of_activity": {
+                      "type": "string"
+                    },
+                    "with_other_persons": {
+                      "type": "string"
+                    },
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "city_official": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "ballot_measure": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "city_official",
+                    "dates_of_activity",
+                    "description",
+                    "id",
+                    "lobbyist",
+                    "total_amount_raised"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_f": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "campaign_service_extended": {
+              "type": "object",
+              "properties": {
+                "candidate_office_sought": {
+                  "type": "string"
+                },
+                "committee": {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                },
+                "total_compensation": {
+                  "type": "string"
+                },
+                "is_contingency": {
+                  "type": "string"
+                },
+                "lobbyist": {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                "city_official": {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                "id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "city_official",
+                "committee",
+                "description",
+                "id",
+                "is_contingency",
+                "lobbyist",
+                "total_compensation"
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_g": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "contract_service_extended": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "amount": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "lobbyist": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "department_agency_or_board": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "amount",
+                      "department_agency_or_board",
+                      "description",
+                      "id",
+                      "lobbyist"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "lobbyist": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "department_agency_or_board": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "amount",
+                    "department_agency_or_board",
+                    "description",
+                    "id",
+                    "lobbyist"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "filing_information": {
+          "type": "object",
+          "properties": {
+            "amendment_sequence_number": {
+              "type": "string"
+            },
+            "filer_id": {
+              "type": "string"
+            },
+            "filing_date": {
+              "type": "string"
+            },
+            "amendment_superceded_filing_id": {
+              "type": "string"
+            },
+            "amendment_description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "amendment_sequence_number",
+            "filer_id",
+            "filing_date"
+          ]
+        },
+        "directory": {
+          "type": "object",
+          "properties": {
+            "entity": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@is_individual": {
+                        "type": "string"
+                      },
+                      "@id": {
+                        "type": "string"
+                      },
+                      "name_first": {
+                        "type": "string"
+                      },
+                      "name_last_or_org": {
+                        "type": "string"
+                      },
+                      "effective_date": {
+                        "type": "null"
+                      },
+                      "deletion_date": {
+                        "type": "null"
+                      },
+                      "name_middle": {
+                        "type": "string"
+                      },
+                      "name_prefix": {
+                        "type": "string"
+                      },
+                      "name_suffix": {
+                        "type": "string"
+                      },
+                      "remove_delete": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id",
+                      "@is_individual"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@is_individual": {
+                      "type": "string"
+                    },
+                    "@id": {
+                      "type": "string"
+                    },
+                    "name_last_or_org": {
+                      "type": "string"
+                    },
+                    "effective_date": {
+                      "type": "null"
+                    },
+                    "deletion_date": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "@id",
+                    "@is_individual",
+                    "name_last_or_org"
+                  ]
+                }
+              ]
+            },
+            "municipal_decision": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "outcome_sought": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id",
+                    "description",
+                    "outcome_sought"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@id": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "outcome_sought": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id",
+                      "description",
+                      "outcome_sought"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "entity"
+          ]
+        },
+        "comment_schedule_a": {
+          "type": "string"
+        },
+        "comment_schedule_b": {
+          "type": "string"
+        },
+        "comment_schedule_c": {
+          "type": "string"
+        },
+        "comment_schedule_d": {
+          "type": "string"
+        },
+        "comment_schedule_e": {
+          "type": "string"
+        },
+        "comment_schedule_f": {
+          "type": "string"
+        },
+        "comment_schedule_g": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@agency",
+        "@type",
+        "@version",
+        "cover",
+        "directory",
+        "filing_information",
+        "schedule_a",
+        "schedule_b",
+        "schedule_c",
+        "schedule_d",
+        "schedule_e",
+        "schedule_f",
+        "schedule_g"
+      ]
+    }
+  },
+  "required": [
+    "disclosure"
+  ]
+},
+{
+  "$schema": "http://json-schema.org/schema#",
+  "form_type": "Ec605",
+  "type": "object",
+  "properties": {
+    "disclosure": {
+      "type": "object",
+      "properties": {
+        "@agency": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "@version": {
+          "type": "string"
+        },
+        "cover": {
+          "type": "object",
+          "properties": {
+            "start_date": {
+              "type": "string"
+            },
+            "end_date": {
+              "type": "string"
+            },
+            "preparer": {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "preparer_title": {
+              "type": "string"
+            },
+            "preparer_address": {
+              "type": "object",
+              "properties": {
+                "line_1": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "zip": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "line_1",
+                "state",
+                "zip"
+              ]
+            },
+            "preparer_phone": {
+              "type": "object",
+              "properties": {
+                "phone_number": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "phone_number"
+              ]
+            },
+            "calendar_year": {
+              "type": "string"
+            },
+            "filer": {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ]
+            },
+            "filer_address": {
+              "type": "object",
+              "properties": {
+                "line_1": {
+                  "type": "string"
+                },
+                "line_2": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "zip": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "city",
+                "line_1",
+                "state",
+                "zip"
+              ]
+            },
+            "filer_phone": {
+              "type": "object",
+              "properties": {
+                "phone_number": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "phone_number"
+              ]
+            },
+            "signature": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "location": {
+                  "type": "string"
+                },
+                "signer_first_name": {
+                  "type": "string"
+                },
+                "signer_last_name": {
+                  "type": "string"
+                },
+                "signer_title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "date",
+                "location",
+                "signer_first_name",
+                "signer_last_name",
+                "signer_title"
+              ]
+            }
+          },
+          "required": [
+            "calendar_year",
+            "end_date",
+            "filer",
+            "filer_address",
+            "filer_phone",
+            "preparer",
+            "preparer_address",
+            "preparer_phone",
+            "preparer_title",
+            "signature",
+            "start_date"
+          ]
+        },
+        "schedule_a": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "city_decision": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "municipal_decision": {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "@id"
+                      ]
+                    },
+                    "total_payments_this_quarter": {
+                      "type": "string"
+                    },
+                    "payments": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "expenditure_lobbyist_payment": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "amount": {
+                                  "type": "string"
+                                },
+                                "payer": {
+                                  "type": "object",
+                                  "properties": {
+                                    "@id": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "@id"
+                                  ]
+                                },
+                                "payer_address": {
+                                  "type": "object",
+                                  "properties": {
+                                    "line_1": {
+                                      "type": "string"
+                                    },
+                                    "city": {
+                                      "type": "string"
+                                    },
+                                    "state": {
+                                      "type": "string"
+                                    },
+                                    "zip": {
+                                      "type": "string"
+                                    },
+                                    "line_2": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "city",
+                                    "line_1",
+                                    "state",
+                                    "zip"
+                                  ]
+                                },
+                                "payer_phone": {
+                                  "type": "object",
+                                  "properties": {
+                                    "phone_number": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "phone_number"
+                                  ]
+                                },
+                                "id": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "amount",
+                                "id",
+                                "payer",
+                                "payer_address",
+                                "payer_phone"
+                              ]
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "amount": {
+                                    "type": "string"
+                                  },
+                                  "payer": {
+                                    "type": "object",
+                                    "properties": {
+                                      "@id": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "@id"
+                                    ]
+                                  },
+                                  "payer_address": {
+                                    "type": "object",
+                                    "properties": {
+                                      "line_1": {
+                                        "type": "string"
+                                      },
+                                      "city": {
+                                        "type": "string"
+                                      },
+                                      "state": {
+                                        "type": "string"
+                                      },
+                                      "zip": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "city",
+                                      "line_1",
+                                      "state",
+                                      "zip"
+                                    ]
+                                  },
+                                  "payer_phone": {
+                                    "type": "object",
+                                    "properties": {
+                                      "phone_number": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "phone_number"
+                                    ]
+                                  },
+                                  "id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "amount",
+                                  "id",
+                                  "payer",
+                                  "payer_address",
+                                  "payer_phone"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "municipal_decision",
+                    "payments",
+                    "total_payments_this_quarter"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "municipal_decision": {
+                        "type": "object",
+                        "properties": {
+                          "@id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "@id"
+                        ]
+                      },
+                      "total_payments_this_quarter": {
+                        "type": "string"
+                      },
+                      "payments": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "expenditure_lobbyist_payment": {
+                            "type": "object",
+                            "properties": {
+                              "amount": {
+                                "type": "string"
+                              },
+                              "payer": {
+                                "type": "object",
+                                "properties": {
+                                  "@id": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "@id"
+                                ]
+                              },
+                              "payer_address": {
+                                "type": "object",
+                                "properties": {
+                                  "line_1": {
+                                    "type": "string"
+                                  },
+                                  "city": {
+                                    "type": "string"
+                                  },
+                                  "state": {
+                                    "type": "string"
+                                  },
+                                  "zip": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "city",
+                                  "line_1",
+                                  "state",
+                                  "zip"
+                                ]
+                              },
+                              "payer_phone": {
+                                "type": "object",
+                                "properties": {
+                                  "phone_number": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "phone_number"
+                                ]
+                              },
+                              "id": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "amount",
+                              "id",
+                              "payer",
+                              "payer_address",
+                              "payer_phone"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count",
+                          "expenditure_lobbyist_payment"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "municipal_decision",
+                      "payments",
+                      "total_payments_this_quarter"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "filing_information": {
+          "type": "object",
+          "properties": {
+            "amendment_sequence_number": {
+              "type": "string"
+            },
+            "filer_id": {
+              "type": "string"
+            },
+            "filing_date": {
+              "type": "string"
+            },
+            "amendment_superceded_filing_id": {
+              "type": "string"
+            },
+            "amendment_description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "amendment_sequence_number",
+            "filer_id",
+            "filing_date"
+          ]
+        },
+        "directory": {
+          "type": "object",
+          "properties": {
+            "entity": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "@is_individual": {
+                    "type": "string"
+                  },
+                  "@id": {
+                    "type": "string"
+                  },
+                  "name_first": {
+                    "type": "string"
+                  },
+                  "name_last_or_org": {
+                    "type": "string"
+                  },
+                  "effective_date": {
+                    "type": "null"
+                  },
+                  "deletion_date": {
+                    "type": "null"
+                  }
+                },
+                "required": [
+                  "@id",
+                  "@is_individual",
+                  "name_last_or_org"
+                ]
+              }
+            },
+            "municipal_decision": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "outcome_sought": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id",
+                    "description",
+                    "outcome_sought"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@id": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "outcome_sought": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id",
+                      "description",
+                      "outcome_sought"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "entity"
+          ]
+        },
+        "comment_schedule_a": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@agency",
+        "@type",
+        "@version",
+        "cover",
+        "directory",
+        "filing_information",
+        "schedule_a"
+      ]
+    }
+  },
+  "required": [
+    "disclosure"
+  ]
+}
+]

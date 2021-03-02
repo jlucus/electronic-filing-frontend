@@ -1,0 +1,3658 @@
+[
+{
+  "$schema": "http://json-schema.org/schema#",
+  "form_type": "Fppc700_new",
+  "type": "object",
+  "properties": {
+    "disclosure": {
+      "type": "object",
+      "properties": {
+        "@agency": {
+          "type": "string"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "@version": {
+          "type": "string"
+        },
+        "cover": {
+          "type": "object",
+          "properties": {
+            "first_name": {
+              "type": "string"
+            },
+            "last_name": {
+              "type": "string"
+            },
+            "middle_name": {
+              "type": "string"
+            },
+            "offices": {
+              "type": "object",
+              "properties": {
+                "@count": {
+                  "type": "string"
+                },
+                "office": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "agency": {
+                          "type": "string"
+                        },
+                        "division_board_district": {
+                          "type": "string"
+                        },
+                        "position": {
+                          "type": "string"
+                        },
+                        "source": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "string"
+                        },
+                        "version_for_add": {
+                          "type": "string"
+                        },
+                        "version_for_edit": {
+                          "type": "string"
+                        },
+                        "version_for_delete": {
+                          "type": "string"
+                        },
+                        "is_primary": {
+                          "type": "string"
+                        },
+                        "assuming_date": {
+                          "type": [
+                            "null",
+                            "string"
+                          ]
+                        },
+                        "leaving_date": {
+                          "type": [
+                            "null",
+                            "string"
+                          ]
+                        },
+                        "lowest_similarity": {
+                          "type": "string"
+                        },
+                        "election_date": {
+                          "type": "null"
+                        },
+                        "date_updated": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "agency",
+                        "id",
+                        "position",
+                        "version_for_add",
+                        "version_for_delete",
+                        "version_for_edit"
+                      ]
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "is_primary": {
+                            "type": "string"
+                          },
+                          "assuming_date": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "leaving_date": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "agency": {
+                            "type": "string"
+                          },
+                          "division_board_district": {
+                            "type": "string"
+                          },
+                          "position": {
+                            "type": "string"
+                          },
+                          "lowest_similarity": {
+                            "type": "string"
+                          },
+                          "source": {
+                            "type": "string"
+                          },
+                          "id": {
+                            "type": "string"
+                          },
+                          "version_for_add": {
+                            "type": "string"
+                          },
+                          "version_for_edit": {
+                            "type": "string"
+                          },
+                          "version_for_delete": {
+                            "type": "string"
+                          },
+                          "election_date": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "date_updated": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "agency",
+                          "id",
+                          "version_for_add",
+                          "version_for_delete",
+                          "version_for_edit"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "@count"
+              ]
+            },
+            "jurisdiction": {
+              "type": "object",
+              "properties": {
+                "is_state": {
+                  "type": "string"
+                },
+                "is_multi_county": {
+                  "type": "string"
+                },
+                "is_city": {
+                  "type": "string"
+                },
+                "is_judge_or_court": {
+                  "type": "string"
+                },
+                "is_county": {
+                  "type": "string"
+                },
+                "is_other": {
+                  "type": "string"
+                },
+                "description_city": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "version_for_add": {
+                  "type": "string"
+                },
+                "version_for_edit": {
+                  "type": "string"
+                },
+                "version_for_delete": {
+                  "type": "string"
+                },
+                "description_county": {
+                  "type": "string"
+                },
+                "description_other": {
+                  "type": "string"
+                },
+                "description_multi_county": {
+                  "type": "string"
+                },
+                "date_updated": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "is_city",
+                "is_county",
+                "is_judge_or_court",
+                "is_multi_county",
+                "is_other",
+                "is_state",
+                "version_for_add",
+                "version_for_delete",
+                "version_for_edit"
+              ]
+            },
+            "statement_type": {
+              "type": "object",
+              "properties": {
+                "is_annual": {
+                  "type": "string"
+                },
+                "is_assuming": {
+                  "type": "string"
+                },
+                "is_candidate": {
+                  "type": "string"
+                },
+                "is_leaving": {
+                  "type": "string"
+                },
+                "annual_start_date": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "date_assumed": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "leaving_left_office": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "leaving_start_date": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "id": {
+                  "type": "string"
+                },
+                "version_for_add": {
+                  "type": "string"
+                },
+                "version_for_edit": {
+                  "type": "string"
+                },
+                "version_for_delete": {
+                  "type": "string"
+                },
+                "candidate_election_date": {
+                  "type": "null"
+                },
+                "candidate_election_year": {
+                  "type": "string"
+                },
+                "date_updated": {
+                  "type": "string"
+                },
+                "candidate_office_sought": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "annual_start_date",
+                "date_assumed",
+                "id",
+                "is_annual",
+                "is_assuming",
+                "is_candidate",
+                "is_leaving",
+                "leaving_left_office",
+                "leaving_start_date",
+                "version_for_add",
+                "version_for_delete",
+                "version_for_edit"
+              ]
+            },
+            "verification": {
+              "type": "object",
+              "properties": {
+                "mailing_address": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "line_1": {
+                          "type": "string"
+                        },
+                        "city": {
+                          "type": "string"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "zip": {
+                          "type": "string"
+                        },
+                        "line_2": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "city",
+                        "line_1",
+                        "state",
+                        "zip"
+                      ]
+                    }
+                  ]
+                },
+                "phone": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "phone_number": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "phone_number"
+                      ]
+                    }
+                  ]
+                },
+                "email": {
+                  "type": "string"
+                },
+                "date_signed": {
+                  "type": "string"
+                },
+                "signature": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "version_for_add": {
+                  "type": "string"
+                },
+                "version_for_edit": {
+                  "type": "string"
+                },
+                "version_for_delete": {
+                  "type": "string"
+                },
+                "date_updated": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "date_signed",
+                "id",
+                "mailing_address",
+                "phone",
+                "signature",
+                "version_for_add",
+                "version_for_delete",
+                "version_for_edit"
+              ]
+            },
+            "id": {
+              "type": "string"
+            },
+            "version_for_add": {
+              "type": "string"
+            },
+            "version_for_edit": {
+              "type": "string"
+            },
+            "version_for_delete": {
+              "type": "string"
+            },
+            "date_updated": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "first_name",
+            "id",
+            "jurisdiction",
+            "last_name",
+            "offices",
+            "statement_type",
+            "verification",
+            "version_for_add",
+            "version_for_delete",
+            "version_for_edit"
+          ]
+        },
+        "schedule_a_1s": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "schedule_a_1": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name_of_business_entity": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "fair_market_value": {
+                        "type": "string"
+                      },
+                      "nature_of_investment": {
+                        "type": "string"
+                      },
+                      "partnership_amount": {
+                        "type": "string"
+                      },
+                      "date_acquired": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "date_disposed": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "version_for_add": {
+                        "type": "string"
+                      },
+                      "version_for_edit": {
+                        "type": "string"
+                      },
+                      "version_for_delete": {
+                        "type": "string"
+                      },
+                      "nature_of_investment_other_description": {
+                        "type": "string"
+                      },
+                      "date_updated": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "date_acquired",
+                      "date_disposed",
+                      "description",
+                      "fair_market_value",
+                      "id",
+                      "name_of_business_entity",
+                      "nature_of_investment",
+                      "partnership_amount",
+                      "version_for_add",
+                      "version_for_delete",
+                      "version_for_edit"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "name_of_business_entity": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "fair_market_value": {
+                      "type": "string"
+                    },
+                    "nature_of_investment": {
+                      "type": "string"
+                    },
+                    "partnership_amount": {
+                      "type": "string"
+                    },
+                    "date_acquired": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "date_disposed": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "version_for_add": {
+                      "type": "string"
+                    },
+                    "version_for_edit": {
+                      "type": "string"
+                    },
+                    "version_for_delete": {
+                      "type": "string"
+                    },
+                    "date_updated": {
+                      "type": "string"
+                    },
+                    "nature_of_investment_other_description": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "date_acquired",
+                    "date_disposed",
+                    "description",
+                    "fair_market_value",
+                    "id",
+                    "name_of_business_entity",
+                    "nature_of_investment",
+                    "partnership_amount",
+                    "version_for_add",
+                    "version_for_delete",
+                    "version_for_edit"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_a_2s": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "schedule_a_2": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "entity_name": {
+                      "type": "string"
+                    },
+                    "address": {
+                      "type": "object",
+                      "properties": {
+                        "line_1": {
+                          "type": "string"
+                        },
+                        "city": {
+                          "type": "string"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "zip": {
+                          "type": "string"
+                        },
+                        "line_2": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "city",
+                        "line_1",
+                        "state",
+                        "zip"
+                      ]
+                    },
+                    "business_type": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "fair_market_value_schedule_a_2": {
+                      "type": "string"
+                    },
+                    "date_acquired": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "date_disposed": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "nature_of_investment": {
+                      "type": "string"
+                    },
+                    "business_position": {
+                      "type": "string"
+                    },
+                    "gross_income_received": {
+                      "type": "string"
+                    },
+                    "income_sources": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "source": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "name": {
+                                  "type": "string"
+                                },
+                                "id": {
+                                  "type": "string"
+                                },
+                                "version_for_add": {
+                                  "type": "string"
+                                },
+                                "version_for_edit": {
+                                  "type": "string"
+                                },
+                                "version_for_delete": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "name",
+                                "version_for_add",
+                                "version_for_delete",
+                                "version_for_edit"
+                              ]
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "version_for_add": {
+                                    "type": "string"
+                                  },
+                                  "version_for_edit": {
+                                    "type": "string"
+                                  },
+                                  "version_for_delete": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "id",
+                                  "name",
+                                  "version_for_add",
+                                  "version_for_delete",
+                                  "version_for_edit"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count"
+                      ]
+                    },
+                    "real_properties": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "real_property": {
+                          "type": "object",
+                          "properties": {
+                            "investment_type": {
+                              "type": "string"
+                            },
+                            "business_or_parcel_or_address": {
+                              "type": "string"
+                            },
+                            "description_or_city_or_location": {
+                              "type": "string"
+                            },
+                            "fair_market_value": {
+                              "type": "string"
+                            },
+                            "real_property_date_acquired": {
+                              "type": "null"
+                            },
+                            "real_property_date_disposed": {
+                              "type": "null"
+                            },
+                            "nature_of_interest": {
+                              "type": "string"
+                            },
+                            "nature_of_interest_lease_years_remaining": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "string"
+                            },
+                            "version_for_add": {
+                              "type": "string"
+                            },
+                            "version_for_edit": {
+                              "type": "string"
+                            },
+                            "version_for_delete": {
+                              "type": "string"
+                            },
+                            "parcel_address": {
+                              "type": "object",
+                              "properties": {
+                                "line_1": {
+                                  "type": "string"
+                                },
+                                "line_2": {
+                                  "type": "string"
+                                },
+                                "city": {
+                                  "type": "string"
+                                },
+                                "state": {
+                                  "type": "string"
+                                },
+                                "zip": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "city",
+                                "line_1",
+                                "line_2",
+                                "state",
+                                "zip"
+                              ]
+                            },
+                            "date_acquired": {
+                              "type": "string"
+                            },
+                            "date_disposed": {
+                              "type": "string"
+                            },
+                            "date_updated": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "fair_market_value",
+                            "id",
+                            "investment_type",
+                            "nature_of_interest",
+                            "version_for_add",
+                            "version_for_delete",
+                            "version_for_edit"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "version_for_add": {
+                      "type": "string"
+                    },
+                    "version_for_edit": {
+                      "type": "string"
+                    },
+                    "version_for_delete": {
+                      "type": "string"
+                    },
+                    "nature_of_investment_other_description": {
+                      "type": "string"
+                    },
+                    "fair_market_value": {
+                      "type": "string"
+                    },
+                    "date_updated": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "business_type",
+                    "date_acquired",
+                    "date_disposed",
+                    "entity_name",
+                    "gross_income_received",
+                    "id",
+                    "income_sources",
+                    "nature_of_investment",
+                    "real_properties",
+                    "version_for_add",
+                    "version_for_delete",
+                    "version_for_edit"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "address": {
+                        "type": "object",
+                        "properties": {
+                          "line_1": {
+                            "type": "string"
+                          },
+                          "city": {
+                            "type": "string"
+                          },
+                          "state": {
+                            "type": "string"
+                          },
+                          "zip": {
+                            "type": "string"
+                          },
+                          "line_2": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "city",
+                          "line_1",
+                          "state",
+                          "zip"
+                        ]
+                      },
+                      "business_position": {
+                        "type": "string"
+                      },
+                      "business_type": {
+                        "type": "string"
+                      },
+                      "date_acquired": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "date_disposed": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "entity_name": {
+                        "type": "string"
+                      },
+                      "fair_market_value_schedule_a_2": {
+                        "type": "string"
+                      },
+                      "gross_income_received": {
+                        "type": "string"
+                      },
+                      "income_sources": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "source": {
+                            "anyOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "version_for_add": {
+                                    "type": "string"
+                                  },
+                                  "version_for_delete": {
+                                    "type": "string"
+                                  },
+                                  "version_for_edit": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "id",
+                                  "name",
+                                  "version_for_add",
+                                  "version_for_delete",
+                                  "version_for_edit"
+                                ]
+                              },
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "version_for_add": {
+                                      "type": "string"
+                                    },
+                                    "version_for_edit": {
+                                      "type": "string"
+                                    },
+                                    "version_for_delete": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "name",
+                                    "version_for_add",
+                                    "version_for_delete",
+                                    "version_for_edit"
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count"
+                        ]
+                      },
+                      "nature_of_investment": {
+                        "type": "string"
+                      },
+                      "real_properties": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "real_property": {
+                            "anyOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "business_or_parcel_or_address": {
+                                      "type": "string"
+                                    },
+                                    "description_or_city_or_location": {
+                                      "type": "string"
+                                    },
+                                    "fair_market_value": {
+                                      "type": "string"
+                                    },
+                                    "investment_type": {
+                                      "type": "string"
+                                    },
+                                    "nature_of_interest": {
+                                      "type": "string"
+                                    },
+                                    "real_property_date_acquired": {
+                                      "type": "null"
+                                    },
+                                    "real_property_date_disposed": {
+                                      "type": "null"
+                                    },
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "version_for_add": {
+                                      "type": "string"
+                                    },
+                                    "version_for_delete": {
+                                      "type": "string"
+                                    },
+                                    "version_for_edit": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "business_or_parcel_or_address",
+                                    "description_or_city_or_location",
+                                    "fair_market_value",
+                                    "id",
+                                    "investment_type",
+                                    "nature_of_interest",
+                                    "real_property_date_acquired",
+                                    "real_property_date_disposed",
+                                    "version_for_add",
+                                    "version_for_delete",
+                                    "version_for_edit"
+                                  ]
+                                }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "investment_type": {
+                                    "type": "string"
+                                  },
+                                  "business_or_parcel_or_address": {
+                                    "type": "string"
+                                  },
+                                  "description_or_city_or_location": {
+                                    "type": "string"
+                                  },
+                                  "fair_market_value": {
+                                    "type": "string"
+                                  },
+                                  "real_property_date_acquired": {
+                                    "type": "null"
+                                  },
+                                  "real_property_date_disposed": {
+                                    "type": "null"
+                                  },
+                                  "nature_of_interest": {
+                                    "type": "string"
+                                  },
+                                  "nature_of_interest_lease_years_remaining": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "version_for_add": {
+                                    "type": "string"
+                                  },
+                                  "version_for_delete": {
+                                    "type": "string"
+                                  },
+                                  "version_for_edit": {
+                                    "type": "string"
+                                  },
+                                  "nature_of_interest_other_description": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "business_or_parcel_or_address",
+                                  "description_or_city_or_location",
+                                  "fair_market_value",
+                                  "id",
+                                  "investment_type",
+                                  "nature_of_interest",
+                                  "real_property_date_acquired",
+                                  "real_property_date_disposed",
+                                  "version_for_add",
+                                  "version_for_delete",
+                                  "version_for_edit"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "version_for_add": {
+                        "type": "string"
+                      },
+                      "version_for_delete": {
+                        "type": "string"
+                      },
+                      "version_for_edit": {
+                        "type": "string"
+                      },
+                      "nature_of_investment_other_description": {
+                        "type": "string"
+                      },
+                      "fair_market_value": {
+                        "type": "string"
+                      },
+                      "date_updated": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "address",
+                      "business_type",
+                      "date_acquired",
+                      "date_disposed",
+                      "entity_name",
+                      "gross_income_received",
+                      "id",
+                      "income_sources",
+                      "nature_of_investment",
+                      "real_properties",
+                      "version_for_add",
+                      "version_for_delete",
+                      "version_for_edit"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_bs": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "schedule_b": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "parcel_or_address": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    },
+                    "fair_market_value": {
+                      "type": "string"
+                    },
+                    "date_acquired": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "date_disposed": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    "gross_income_received": {
+                      "type": "string"
+                    },
+                    "nature_of_interest": {
+                      "type": "string"
+                    },
+                    "income_sources": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "source": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "version_for_add": {
+                                    "type": "string"
+                                  },
+                                  "version_for_delete": {
+                                    "type": "string"
+                                  },
+                                  "version_for_edit": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "id",
+                                  "name",
+                                  "version_for_add",
+                                  "version_for_delete",
+                                  "version_for_edit"
+                                ]
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "name": {
+                                  "type": "string"
+                                },
+                                "id": {
+                                  "type": "string"
+                                },
+                                "version_for_add": {
+                                  "type": "string"
+                                },
+                                "version_for_delete": {
+                                  "type": "string"
+                                },
+                                "version_for_edit": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "name",
+                                "version_for_add",
+                                "version_for_delete",
+                                "version_for_edit"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count"
+                      ]
+                    },
+                    "loan": {
+                      "type": "object",
+                      "properties": {
+                        "address": {
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "line_1": {
+                                  "type": "string"
+                                },
+                                "city": {
+                                  "type": "string"
+                                },
+                                "state": {
+                                  "type": "string"
+                                },
+                                "zip": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "city",
+                                "line_1",
+                                "state",
+                                "zip"
+                              ]
+                            }
+                          ]
+                        },
+                        "highest_balance": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "string"
+                        },
+                        "version_for_add": {
+                          "type": "string"
+                        },
+                        "version_for_edit": {
+                          "type": "string"
+                        },
+                        "version_for_delete": {
+                          "type": "string"
+                        },
+                        "has_no_interest_rate": {
+                          "type": "string"
+                        },
+                        "name_of_lender": {
+                          "type": "string"
+                        },
+                        "interest_rate": {
+                          "type": "string"
+                        },
+                        "term": {
+                          "type": "string"
+                        },
+                        "business_activity": {
+                          "type": "string"
+                        },
+                        "guarantor": {
+                          "type": "string"
+                        },
+                        "term_type": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "address",
+                        "highest_balance",
+                        "id",
+                        "version_for_add",
+                        "version_for_delete",
+                        "version_for_edit"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "version_for_add": {
+                      "type": "string"
+                    },
+                    "version_for_edit": {
+                      "type": "string"
+                    },
+                    "version_for_delete": {
+                      "type": "string"
+                    },
+                    "nature_of_interest_other_description": {
+                      "type": "string"
+                    },
+                    "parcel_address": {
+                      "type": "object",
+                      "properties": {
+                        "line_1": {
+                          "type": "string"
+                        },
+                        "city": {
+                          "type": "string"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "zip": {
+                          "type": "string"
+                        },
+                        "line_2": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "city",
+                        "line_1",
+                        "state",
+                        "zip"
+                      ]
+                    },
+                    "date_updated": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "date_acquired",
+                    "date_disposed",
+                    "fair_market_value",
+                    "gross_income_received",
+                    "id",
+                    "income_sources",
+                    "loan",
+                    "nature_of_interest",
+                    "version_for_add",
+                    "version_for_delete",
+                    "version_for_edit"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "city": {
+                        "type": "string"
+                      },
+                      "date_acquired": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "date_disposed": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "fair_market_value": {
+                        "type": "string"
+                      },
+                      "gross_income_received": {
+                        "type": "string"
+                      },
+                      "income_sources": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "source": {
+                            "anyOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "version_for_add": {
+                                    "type": "string"
+                                  },
+                                  "version_for_delete": {
+                                    "type": "string"
+                                  },
+                                  "version_for_edit": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "id",
+                                  "name",
+                                  "version_for_add",
+                                  "version_for_delete",
+                                  "version_for_edit"
+                                ]
+                              },
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "version_for_add": {
+                                      "type": "string"
+                                    },
+                                    "version_for_delete": {
+                                      "type": "string"
+                                    },
+                                    "version_for_edit": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "name",
+                                    "version_for_add",
+                                    "version_for_delete",
+                                    "version_for_edit"
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count"
+                        ]
+                      },
+                      "loan": {
+                        "type": "object",
+                        "properties": {
+                          "address": {
+                            "anyOf": [
+                              {
+                                "type": "null"
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "line_1": {
+                                    "type": "string"
+                                  },
+                                  "city": {
+                                    "type": "string"
+                                  },
+                                  "state": {
+                                    "type": "string"
+                                  },
+                                  "zip": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "city",
+                                  "line_1",
+                                  "state",
+                                  "zip"
+                                ]
+                              }
+                            ]
+                          },
+                          "has_no_interest_rate": {
+                            "type": "string"
+                          },
+                          "highest_balance": {
+                            "type": "string"
+                          },
+                          "id": {
+                            "type": "string"
+                          },
+                          "version_for_add": {
+                            "type": "string"
+                          },
+                          "version_for_delete": {
+                            "type": "string"
+                          },
+                          "version_for_edit": {
+                            "type": "string"
+                          },
+                          "business_activity": {
+                            "type": "string"
+                          },
+                          "interest_rate": {
+                            "type": "string"
+                          },
+                          "name_of_lender": {
+                            "type": "string"
+                          },
+                          "term": {
+                            "type": "string"
+                          },
+                          "term_type": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "address",
+                          "highest_balance",
+                          "id",
+                          "version_for_add",
+                          "version_for_delete",
+                          "version_for_edit"
+                        ]
+                      },
+                      "nature_of_interest": {
+                        "type": "string"
+                      },
+                      "parcel_or_address": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "version_for_add": {
+                        "type": "string"
+                      },
+                      "version_for_delete": {
+                        "type": "string"
+                      },
+                      "version_for_edit": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "city",
+                      "date_acquired",
+                      "date_disposed",
+                      "fair_market_value",
+                      "gross_income_received",
+                      "id",
+                      "income_sources",
+                      "loan",
+                      "nature_of_interest",
+                      "parcel_or_address",
+                      "version_for_add",
+                      "version_for_delete",
+                      "version_for_edit"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_c_1s": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "schedule_c_1": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name_of_income_source": {
+                        "type": "string"
+                      },
+                      "address": {
+                        "type": "object",
+                        "properties": {
+                          "line_1": {
+                            "type": "string"
+                          },
+                          "line_2": {
+                            "type": "string"
+                          },
+                          "city": {
+                            "type": "string"
+                          },
+                          "state": {
+                            "type": "string"
+                          },
+                          "zip": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "city",
+                          "line_1",
+                          "state",
+                          "zip"
+                        ]
+                      },
+                      "business_activity": {
+                        "type": "string"
+                      },
+                      "business_position": {
+                        "type": "string"
+                      },
+                      "gross_income_received_schedule_c_1": {
+                        "type": "string"
+                      },
+                      "reason_for_income": {
+                        "type": "string"
+                      },
+                      "income_sources": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "source": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string"
+                              },
+                              "version_for_add": {
+                                "type": "string"
+                              },
+                              "version_for_delete": {
+                                "type": "string"
+                              },
+                              "version_for_edit": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name",
+                              "version_for_add",
+                              "version_for_delete",
+                              "version_for_edit"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count"
+                        ]
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "version_for_add": {
+                        "type": "string"
+                      },
+                      "version_for_delete": {
+                        "type": "string"
+                      },
+                      "version_for_edit": {
+                        "type": "string"
+                      },
+                      "reason_for_income_sale": {
+                        "type": "string"
+                      },
+                      "reason_for_income_other": {
+                        "type": "string"
+                      },
+                      "gross_income_received": {
+                        "type": "string"
+                      },
+                      "date_updated": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "address",
+                      "id",
+                      "income_sources",
+                      "name_of_income_source",
+                      "reason_for_income",
+                      "version_for_add",
+                      "version_for_delete",
+                      "version_for_edit"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "name_of_income_source": {
+                      "type": "string"
+                    },
+                    "address": {
+                      "type": "object",
+                      "properties": {
+                        "line_1": {
+                          "type": "string"
+                        },
+                        "line_2": {
+                          "type": "string"
+                        },
+                        "city": {
+                          "type": "string"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "zip": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "city",
+                        "line_1",
+                        "state",
+                        "zip"
+                      ]
+                    },
+                    "business_activity": {
+                      "type": "string"
+                    },
+                    "business_position": {
+                      "type": "string"
+                    },
+                    "gross_income_received_schedule_c_1": {
+                      "type": "string"
+                    },
+                    "reason_for_income": {
+                      "type": "string"
+                    },
+                    "income_sources": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "source": {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "string"
+                            },
+                            "version_for_add": {
+                              "type": "string"
+                            },
+                            "version_for_edit": {
+                              "type": "string"
+                            },
+                            "version_for_delete": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "name",
+                            "version_for_add",
+                            "version_for_delete",
+                            "version_for_edit"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "version_for_add": {
+                      "type": "string"
+                    },
+                    "version_for_edit": {
+                      "type": "string"
+                    },
+                    "version_for_delete": {
+                      "type": "string"
+                    },
+                    "reason_for_income_other": {
+                      "type": "string"
+                    },
+                    "reason_for_income_sale": {
+                      "type": "string"
+                    },
+                    "gross_income_received": {
+                      "type": "string"
+                    },
+                    "date_updated": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "id",
+                    "income_sources",
+                    "name_of_income_source",
+                    "reason_for_income",
+                    "version_for_add",
+                    "version_for_delete",
+                    "version_for_edit"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_c_2s": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "schedule_c_2": {
+              "type": "object",
+              "properties": {
+                "loan": {
+                  "type": "object",
+                  "properties": {
+                    "name_of_lender": {
+                      "type": "string"
+                    },
+                    "address": {
+                      "type": "object",
+                      "properties": {
+                        "line_1": {
+                          "type": "string"
+                        },
+                        "line_2": {
+                          "type": "string"
+                        },
+                        "city": {
+                          "type": "string"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "zip": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "city",
+                        "line_1",
+                        "state",
+                        "zip"
+                      ]
+                    },
+                    "business_activity": {
+                      "type": "string"
+                    },
+                    "has_no_interest_rate": {
+                      "type": "string"
+                    },
+                    "term_type": {
+                      "type": "string"
+                    },
+                    "highest_balance": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "version_for_add": {
+                      "type": "string"
+                    },
+                    "version_for_delete": {
+                      "type": "string"
+                    },
+                    "version_for_edit": {
+                      "type": "string"
+                    },
+                    "interest_rate": {
+                      "type": "string"
+                    },
+                    "term": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "highest_balance",
+                    "id",
+                    "name_of_lender",
+                    "version_for_add",
+                    "version_for_delete",
+                    "version_for_edit"
+                  ]
+                },
+                "loan_security": {
+                  "type": "string"
+                },
+                "loan_security_real_property_address": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "line_1": {
+                          "type": "string"
+                        },
+                        "city": {
+                          "type": "string"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "zip": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "city",
+                        "line_1",
+                        "state",
+                        "zip"
+                      ]
+                    }
+                  ]
+                },
+                "id": {
+                  "type": "string"
+                },
+                "version_for_add": {
+                  "type": "string"
+                },
+                "version_for_delete": {
+                  "type": "string"
+                },
+                "version_for_edit": {
+                  "type": "string"
+                },
+                "date_updated": {
+                  "type": "string"
+                },
+                "loan_security_other": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "loan",
+                "loan_security",
+                "loan_security_real_property_address",
+                "version_for_add",
+                "version_for_delete",
+                "version_for_edit"
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_ds": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            },
+            "schedule_d": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "address": {
+                        "type": "object",
+                        "properties": {
+                          "line_1": {
+                            "type": "string"
+                          },
+                          "line_2": {
+                            "type": "string"
+                          },
+                          "city": {
+                            "type": "string"
+                          },
+                          "state": {
+                            "type": "string"
+                          },
+                          "zip": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "city",
+                          "line_1",
+                          "state",
+                          "zip"
+                        ]
+                      },
+                      "business_activity": {
+                        "type": "string"
+                      },
+                      "gifts": {
+                        "type": "object",
+                        "properties": {
+                          "@count": {
+                            "type": "string"
+                          },
+                          "gift": {
+                            "anyOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "amount": {
+                                    "type": "string"
+                                  },
+                                  "description": {
+                                    "type": "string"
+                                  },
+                                  "gift_date": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "version_for_add": {
+                                    "type": "string"
+                                  },
+                                  "version_for_delete": {
+                                    "type": "string"
+                                  },
+                                  "version_for_edit": {
+                                    "type": "string"
+                                  },
+                                  "date": {
+                                    "type": "string"
+                                  },
+                                  "date_updated": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "amount",
+                                  "description",
+                                  "id",
+                                  "version_for_add",
+                                  "version_for_delete",
+                                  "version_for_edit"
+                                ]
+                              },
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "gift_date": {
+                                      "type": "string"
+                                    },
+                                    "amount": {
+                                      "type": "string"
+                                    },
+                                    "description": {
+                                      "type": "string"
+                                    },
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "version_for_add": {
+                                      "type": "string"
+                                    },
+                                    "version_for_delete": {
+                                      "type": "string"
+                                    },
+                                    "version_for_edit": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "amount",
+                                    "description",
+                                    "gift_date",
+                                    "id",
+                                    "version_for_add",
+                                    "version_for_delete",
+                                    "version_for_edit"
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "@count",
+                          "gift"
+                        ]
+                      },
+                      "name_of_source": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "version_for_add": {
+                        "type": "string"
+                      },
+                      "version_for_delete": {
+                        "type": "string"
+                      },
+                      "version_for_edit": {
+                        "type": "string"
+                      },
+                      "date_updated": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "address",
+                      "gifts",
+                      "id",
+                      "name_of_source",
+                      "version_for_add",
+                      "version_for_delete",
+                      "version_for_edit"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "name_of_source": {
+                      "type": "string"
+                    },
+                    "address": {
+                      "type": "object",
+                      "properties": {
+                        "line_1": {
+                          "type": "string"
+                        },
+                        "city": {
+                          "type": "string"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "zip": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "city",
+                        "line_1",
+                        "state",
+                        "zip"
+                      ]
+                    },
+                    "business_activity": {
+                      "type": "string"
+                    },
+                    "gifts": {
+                      "type": "object",
+                      "properties": {
+                        "@count": {
+                          "type": "string"
+                        },
+                        "gift": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "gift_date": {
+                                  "type": "string"
+                                },
+                                "amount": {
+                                  "type": "string"
+                                },
+                                "description": {
+                                  "type": "string"
+                                },
+                                "id": {
+                                  "type": "string"
+                                },
+                                "version_for_add": {
+                                  "type": "string"
+                                },
+                                "version_for_edit": {
+                                  "type": "string"
+                                },
+                                "version_for_delete": {
+                                  "type": "string"
+                                },
+                                "date": {
+                                  "type": "string"
+                                },
+                                "date_updated": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "amount",
+                                "description",
+                                "id",
+                                "version_for_add",
+                                "version_for_delete",
+                                "version_for_edit"
+                              ]
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "amount": {
+                                    "type": "string"
+                                  },
+                                  "description": {
+                                    "type": "string"
+                                  },
+                                  "gift_date": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "version_for_add": {
+                                    "type": "string"
+                                  },
+                                  "version_for_delete": {
+                                    "type": "string"
+                                  },
+                                  "version_for_edit": {
+                                    "type": "string"
+                                  },
+                                  "date": {
+                                    "type": "string"
+                                  },
+                                  "date_updated": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "amount",
+                                  "description",
+                                  "id",
+                                  "version_for_add",
+                                  "version_for_delete",
+                                  "version_for_edit"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "@count",
+                        "gift"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "version_for_add": {
+                      "type": "string"
+                    },
+                    "version_for_edit": {
+                      "type": "string"
+                    },
+                    "version_for_delete": {
+                      "type": "string"
+                    },
+                    "date_updated": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "gifts",
+                    "id",
+                    "name_of_source",
+                    "version_for_add",
+                    "version_for_delete",
+                    "version_for_edit"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "schedule_es": {
+          "type": "object",
+          "properties": {
+            "@count": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "@count"
+          ]
+        },
+        "has_loaded_offices_from_admin": {
+          "type": "string"
+        },
+        "form_tool_hash": {
+          "type": "string"
+        },
+        "e_filing_as_filing_of_record_allowed": {
+          "type": "string"
+        },
+        "filing_information": {
+          "type": "object",
+          "properties": {
+            "amendment_sequence_number": {
+              "type": "string"
+            },
+            "amendment_superceded_filing_date": {
+              "type": "string"
+            },
+            "creation_date": {
+              "type": "string"
+            },
+            "filer_id": {
+              "type": "string"
+            },
+            "filing_date": {
+              "type": "string"
+            },
+            "s_a_n": {
+              "type": "string"
+            },
+            "form_tool_hash": {
+              "type": "string"
+            },
+            "software_name": {
+              "type": "string"
+            },
+            "software_version": {
+              "type": "string"
+            },
+            "amendment_superceded_filing_id": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "amendment_sequence_number",
+            "amendment_superceded_filing_date",
+            "creation_date",
+            "filing_date"
+          ]
+        },
+        "legacy_information": {
+          "type": "object",
+          "properties": {
+            "document_year": {
+              "type": "string"
+            },
+            "activity_year": {
+              "type": "string"
+            },
+            "time_amendment_was_created": {
+              "type": "string"
+            },
+            "filer_reference": {
+              "type": "string"
+            },
+            "is_returning_user": {
+              "type": "string"
+            },
+            "filer_reference_hash": {
+              "type": "string"
+            },
+            "is_8_7_2_0_0_filer": {
+              "type": "string"
+            },
+            "admin_filing_requirement_i_ds": {
+              "type": "object",
+              "properties": {
+                "@count": {
+                  "type": "string"
+                },
+                "admin_i_d": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "@count"
+              ]
+            },
+            "start_date": {
+              "type": "string"
+            },
+            "end_date": {
+              "type": "string"
+            },
+            "date_updated": {
+              "type": "string"
+            },
+            "agency_abbreviation": {
+              "type": "string"
+            },
+            "agency_reference": {
+              "type": "string"
+            },
+            "filer_address_1": {
+              "type": "string"
+            },
+            "filer_city": {
+              "type": "string"
+            },
+            "filer_state_code": {
+              "type": "string"
+            },
+            "filer_zip": {
+              "type": "string"
+            },
+            "filer_phone": {
+              "type": "string"
+            },
+            "filer_fax": {
+              "type": "string"
+            },
+            "filer_email": {
+              "type": "string"
+            },
+            "filer_date_updated": {
+              "type": "string"
+            },
+            "offices": {
+              "type": "object",
+              "properties": {
+                "@count": {
+                  "type": "string"
+                },
+                "office": {
+                  "type": "object",
+                  "properties": {
+                    "agency": {
+                      "type": "string"
+                    },
+                    "position": {
+                      "type": "string"
+                    },
+                    "date_updated": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "version_for_add": {
+                      "type": "string"
+                    },
+                    "version_for_edit": {
+                      "type": "string"
+                    },
+                    "version_for_delete": {
+                      "type": "string"
+                    },
+                    "division_board_district": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "agency",
+                    "date_updated",
+                    "id",
+                    "position",
+                    "version_for_add",
+                    "version_for_delete",
+                    "version_for_edit"
+                  ]
+                }
+              },
+              "required": [
+                "@count"
+              ]
+            },
+            "filer_address_2": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "activity_year",
+            "admin_filing_requirement_i_ds",
+            "agency_abbreviation",
+            "agency_reference",
+            "date_updated",
+            "document_year",
+            "end_date",
+            "filer_address_1",
+            "filer_city",
+            "filer_date_updated",
+            "filer_email",
+            "filer_phone",
+            "filer_reference",
+            "filer_reference_hash",
+            "filer_state_code",
+            "filer_zip",
+            "is_8_7_2_0_0_filer",
+            "is_returning_user",
+            "offices",
+            "start_date",
+            "time_amendment_was_created"
+          ]
+        },
+        "filing": {
+          "type": "object",
+          "properties": {
+            "amendment_sequence_number": {
+              "type": "string"
+            },
+            "amendment_superceded_filing_date": {
+              "type": "string"
+            },
+            "creation_date": {
+              "type": "string"
+            },
+            "filing_date": {
+              "type": "string"
+            },
+            "efiling_accepted_as": {
+              "type": "string"
+            },
+            "software_name": {
+              "type": "string"
+            },
+            "software_version": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "amendment_sequence_number",
+            "amendment_superceded_filing_date",
+            "creation_date",
+            "efiling_accepted_as",
+            "filing_date",
+            "software_name",
+            "software_version"
+          ]
+        },
+        "show_draft": {
+          "type": "string"
+        },
+        "comments_schedule_a_2": {
+          "type": "string"
+        },
+        "comments_schedule_a_1": {
+          "type": "string"
+        },
+        "comments_schedule_b": {
+          "type": "string"
+        },
+        "comments_schedule_c": {
+          "type": "string"
+        },
+        "comments_schedule_d": {
+          "type": "string"
+        },
+        "comments_schedule_e": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@agency",
+        "@type",
+        "@version",
+        "cover",
+        "e_filing_as_filing_of_record_allowed",
+        "filing_information",
+        "schedule_a_1s",
+        "schedule_a_2s",
+        "schedule_bs",
+        "schedule_c_1s",
+        "schedule_c_2s",
+        "schedule_ds",
+        "schedule_es"
+      ]
+    }
+  },
+  "required": [
+    "disclosure"
+  ]
+},
+{
+  "$schema": "http://json-schema.org/schema#",
+  "form_type": "Fppc700_old",
+  "type": "object",
+  "properties": {
+    "document": {
+      "type": "object",
+      "properties": {
+        "@form": {
+          "type": "string"
+        },
+        "@version": {
+          "type": "string"
+        },
+        "@activity-year": {
+          "type": "string"
+        },
+        "@filer-reference": {
+          "type": "string"
+        },
+        "@is-amendment": {
+          "type": "string"
+        },
+        "@is-returning-user": {
+          "type": "string"
+        },
+        "@time-amendment-was-created": {
+          "type": "string"
+        },
+        "@filer-reference-hash": {
+          "type": "string"
+        },
+        "filing": {
+          "type": "object",
+          "properties": {
+            "software-vendor": {
+              "type": "string"
+            },
+            "software-version": {
+              "type": "string"
+            },
+            "is-initial": {
+              "type": "string"
+            },
+            "is-candidate": {
+              "type": "string"
+            },
+            "is-annual": {
+              "type": "string"
+            },
+            "is-termination": {
+              "type": "string"
+            },
+            "office-sought": {
+              "type": "null"
+            },
+            "start-date": {
+              "type": "string"
+            },
+            "end-date": {
+              "type": "string"
+            },
+            "date-updated": {
+              "type": "string"
+            },
+            "assumed-office-date": {
+              "type": "string"
+            },
+            "left-office-date": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "is-annual",
+            "is-candidate",
+            "is-initial",
+            "is-termination",
+            "software-vendor",
+            "software-version"
+          ]
+        },
+        "office-use-only": {
+          "type": "object",
+          "properties": {
+            "receiving-agency": {
+              "type": "string"
+            },
+            "receive-time": {
+              "type": "string"
+            },
+            "agency-filing-id": {
+              "type": "string"
+            },
+            "agency-reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "agency-filing-id",
+            "agency-reference",
+            "receive-time",
+            "receiving-agency"
+          ]
+        },
+        "filer": {
+          "type": "object",
+          "properties": {
+            "first-name": {
+              "type": "string"
+            },
+            "last-name": {
+              "type": "string"
+            },
+            "middle-name": {
+              "type": "string"
+            },
+            "address-line1": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "zip": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "date-updated": {
+              "type": "string"
+            },
+            "address-line2": {
+              "type": "string"
+            },
+            "fax": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "address-line1",
+            "city",
+            "email",
+            "first-name",
+            "last-name",
+            "phone",
+            "state",
+            "zip"
+          ]
+        },
+        "offices": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "office": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "division": {
+                          "type": [
+                            "null",
+                            "string"
+                          ]
+                        },
+                        "position": {
+                          "type": "string"
+                        },
+                        "date-updated": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "division",
+                        "name",
+                        "position"
+                      ]
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "division": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "position": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "division",
+                          "name",
+                          "position"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "office"
+              ]
+            }
+          ]
+        },
+        "jurisdiction": {
+          "type": "object",
+          "properties": {
+            "is-judge": {
+              "type": "string"
+            },
+            "is-state": {
+              "type": "string"
+            },
+            "is-county": {
+              "type": "string"
+            },
+            "is-city": {
+              "type": "string"
+            },
+            "is-multicounty": {
+              "type": "string"
+            },
+            "is-other": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "date-updated": {
+              "type": "string"
+            },
+            "county": {
+              "type": "string"
+            },
+            "other": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "is-city",
+            "is-county",
+            "is-multicounty",
+            "is-other",
+            "is-state"
+          ]
+        },
+        "signature": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "date-updated": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        "schedule-b": {
+          "type": "object",
+          "properties": {
+            "item": {
+              "type": "object",
+              "properties": {
+                "address-line1": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "string"
+                },
+                "zip": {
+                  "type": "string"
+                },
+                "fmv": {
+                  "type": "string"
+                },
+                "date-updated": {
+                  "type": "string"
+                },
+                "acquired-date": {
+                  "type": "string"
+                },
+                "nature": {
+                  "type": "string"
+                },
+                "lender": {
+                  "type": "object",
+                  "properties": {
+                    "lender-name": {
+                      "type": "string"
+                    },
+                    "address-line1": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "zip": {
+                      "type": "string"
+                    },
+                    "activity-description": {
+                      "type": "string"
+                    },
+                    "interest-rate": {
+                      "type": "string"
+                    },
+                    "loan-term-months": {
+                      "type": "string"
+                    },
+                    "highest-balance": {
+                      "type": "string"
+                    },
+                    "guarantor-name": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "activity-description",
+                    "address-line1",
+                    "city",
+                    "guarantor-name",
+                    "highest-balance",
+                    "interest-rate",
+                    "lender-name",
+                    "loan-term-months",
+                    "state",
+                    "zip"
+                  ]
+                },
+                "rental-property": {
+                  "type": "object",
+                  "properties": {
+                    "gross-income": {
+                      "type": "string"
+                    },
+                    "sources": {
+                      "type": "object",
+                      "properties": {
+                        "source": {
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "source"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "gross-income",
+                    "sources"
+                  ]
+                }
+              },
+              "required": [
+                "address-line1",
+                "city",
+                "fmv",
+                "nature",
+                "state",
+                "zip"
+              ]
+            },
+            "comment": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "item"
+          ]
+        },
+        "schedule-d": {
+          "type": "object",
+          "properties": {
+            "item": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "source-name": {
+                        "type": "string"
+                      },
+                      "address-line1": {
+                        "type": "string"
+                      },
+                      "city": {
+                        "type": "string"
+                      },
+                      "state": {
+                        "type": "string"
+                      },
+                      "zip": {
+                        "type": "string"
+                      },
+                      "activity-description": {
+                        "type": "string"
+                      },
+                      "gifts": {
+                        "type": "object",
+                        "properties": {
+                          "item": {
+                            "anyOf": [
+                              {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "date": {
+                                      "type": "string"
+                                    },
+                                    "amount": {
+                                      "type": "string"
+                                    },
+                                    "description": {
+                                      "type": "string"
+                                    },
+                                    "date-updated": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "amount",
+                                    "date",
+                                    "date-updated",
+                                    "description"
+                                  ]
+                                }
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "date": {
+                                    "type": "string"
+                                  },
+                                  "amount": {
+                                    "type": "string"
+                                  },
+                                  "description": {
+                                    "type": "string"
+                                  },
+                                  "date-updated": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "amount",
+                                  "date",
+                                  "description"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "item"
+                        ]
+                      },
+                      "date-updated": {
+                        "type": "string"
+                      },
+                      "address-line2": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "activity-description",
+                      "address-line1",
+                      "city",
+                      "gifts",
+                      "source-name",
+                      "state",
+                      "zip"
+                    ]
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "source-name": {
+                      "type": "string"
+                    },
+                    "address-line1": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "zip": {
+                      "type": "string"
+                    },
+                    "activity-description": {
+                      "type": "null"
+                    },
+                    "gifts": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "object",
+                          "properties": {
+                            "date": {
+                              "type": "string"
+                            },
+                            "amount": {
+                              "type": "string"
+                            },
+                            "description": {
+                              "type": "string"
+                            },
+                            "date-updated": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "amount",
+                            "date",
+                            "date-updated",
+                            "description"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "item"
+                      ]
+                    },
+                    "date-updated": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "activity-description",
+                    "address-line1",
+                    "city",
+                    "date-updated",
+                    "gifts",
+                    "source-name",
+                    "state",
+                    "zip"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "item"
+          ]
+        },
+        "schedule-c": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "income-received": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "source-name": {
+                          "type": "string"
+                        },
+                        "address-line1": {
+                          "type": "string"
+                        },
+                        "city": {
+                          "type": "string"
+                        },
+                        "state": {
+                          "type": "string"
+                        },
+                        "zip": {
+                          "type": "string"
+                        },
+                        "activity-description": {
+                          "type": [
+                            "null",
+                            "string"
+                          ]
+                        },
+                        "business-position": {
+                          "type": "string"
+                        },
+                        "gross-income": {
+                          "type": "string"
+                        },
+                        "nature": {
+                          "type": "string"
+                        },
+                        "date-updated": {
+                          "type": "string"
+                        },
+                        "nature-description": {
+                          "type": "string"
+                        },
+                        "address-line2": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "activity-description",
+                        "address-line1",
+                        "business-position",
+                        "city",
+                        "gross-income",
+                        "nature",
+                        "source-name",
+                        "state",
+                        "zip"
+                      ]
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "source-name": {
+                            "type": "string"
+                          },
+                          "address-line1": {
+                            "type": "string"
+                          },
+                          "city": {
+                            "type": "string"
+                          },
+                          "state": {
+                            "type": "string"
+                          },
+                          "zip": {
+                            "type": "string"
+                          },
+                          "activity-description": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "business-position": {
+                            "type": "string"
+                          },
+                          "gross-income": {
+                            "type": "string"
+                          },
+                          "nature": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "activity-description",
+                          "address-line1",
+                          "business-position",
+                          "city",
+                          "gross-income",
+                          "nature",
+                          "source-name",
+                          "state",
+                          "zip"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "loan-received": {
+                  "type": "object",
+                  "properties": {
+                    "lender-name": {
+                      "type": "string"
+                    },
+                    "address-line1": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "zip": {
+                      "type": "string"
+                    },
+                    "activity-description": {
+                      "type": "string"
+                    },
+                    "highest-balance": {
+                      "type": "string"
+                    },
+                    "interest-rate": {
+                      "type": "string"
+                    },
+                    "loan-term-months": {
+                      "type": "string"
+                    },
+                    "loan-security": {
+                      "type": "object",
+                      "properties": {
+                        "personal_residence": {
+                          "type": "null"
+                        }
+                      },
+                      "required": [
+                        "personal_residence"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "activity-description",
+                    "address-line1",
+                    "city",
+                    "highest-balance",
+                    "interest-rate",
+                    "lender-name",
+                    "loan-security",
+                    "loan-term-months",
+                    "state",
+                    "zip"
+                  ]
+                }
+              },
+              "required": [
+                "income-received"
+              ]
+            }
+          ]
+        },
+        "FilingRequirementIDs": {
+          "type": "object",
+          "properties": {
+            "requirement-id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "requirement-id"
+          ]
+        },
+        "schedule-a1": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "item": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "business-name": {
+                          "type": "string"
+                        },
+                        "activity-description": {
+                          "type": "string"
+                        },
+                        "fmv": {
+                          "type": "string"
+                        },
+                        "nature": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "activity-description",
+                        "business-name",
+                        "fmv",
+                        "nature"
+                      ]
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "business-name": {
+                            "type": "string"
+                          },
+                          "activity-description": {
+                            "type": "string"
+                          },
+                          "fmv": {
+                            "type": "string"
+                          },
+                          "nature": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "activity-description",
+                          "business-name",
+                          "fmv",
+                          "nature"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "item"
+              ]
+            }
+          ]
+        },
+        "schedule-a2": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "item": {
+                  "type": "object",
+                  "properties": {
+                    "business-name": {
+                      "type": "string"
+                    },
+                    "address-line1": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "zip": {
+                      "type": "string"
+                    },
+                    "business": {
+                      "type": "object",
+                      "properties": {
+                        "activity-description": {
+                          "type": "string"
+                        },
+                        "fmv": {
+                          "type": "string"
+                        },
+                        "nature": {
+                          "type": "string"
+                        },
+                        "nature-description": {
+                          "type": "string"
+                        },
+                        "business-position": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "activity-description",
+                        "business-position",
+                        "fmv",
+                        "nature"
+                      ]
+                    },
+                    "gross-income": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address-line1",
+                    "business",
+                    "business-name",
+                    "city",
+                    "gross-income",
+                    "state",
+                    "zip"
+                  ]
+                }
+              },
+              "required": [
+                "item"
+              ]
+            }
+          ]
+        },
+        "amendment": {
+          "type": "object",
+          "properties": {
+            "sequence": {
+              "type": "string"
+            },
+            "description": {
+              "type": "null"
+            },
+            "superceded-filing-id": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "description",
+            "sequence",
+            "superceded-filing-id"
+          ]
+        },
+        "office-agency-court": {
+          "type": "object",
+          "properties": {
+            "office": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "division": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "position": {
+                  "type": "string"
+                },
+                "date-updated": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "date-updated",
+                "division",
+                "name",
+                "position"
+              ]
+            }
+          },
+          "required": [
+            "office"
+          ]
+        }
+      },
+      "required": [
+        "@activity-year",
+        "@filer-reference",
+        "@filer-reference-hash",
+        "@form",
+        "@version",
+        "filer",
+        "filing",
+        "offices",
+        "signature"
+      ]
+    }
+  },
+  "required": [
+    "document"
+  ]
+}
+]
